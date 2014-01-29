@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="jitteryApp">
+<head>
+	<meta charset="utf-8">
+	<title>Jittery Joe's</title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="lib/css/animate.css">
+	<link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+	<header ng-init="page = 'blend'" ng-class="{blendspage: page == 'blend', storiespage: page == 'stories'}">
+		<nav class="main-nav">
+			<ul class="pull-right">
+		        <li><a href="#Blends" ng-click="page = 'blend'">Blends</a></li>
+		        <li><a href="#Stories" ng-click="page = 'stories'">Stories</a></li>
+	        </ul>
+    	</nav>
+    	<div class="jittery-logo">
+    		<!-- <object type="image/svg+xml" data="img/Coffee.svg" class="coffee-logo" ng-show="page == 'blend'"></object> -->
+    		<img src="img/Coffee.svg" class="coffee-logo" ng-if="page == 'blend'" alt="Our blends">
+    		<img src="img/Stories.svg" class="coffee-logo stories-logo" ng-if="page == 'stories'" alt="Your stories">
+    	</div>
+	</header>
+
+	<div ng-view class="main-body"></div>
+
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular-animate.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+</body>
+</html>
