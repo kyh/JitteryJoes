@@ -1,4 +1,4 @@
-<div class="review-form-wrapper clearfix">
+<div class="review-form-wrapper container clearfix">
 	<form name="ratingForm" ng-submit="addNewRating()">
 		<div class="review-item form-group col-md-4">
 			<label for="review-item-field">Choose a blend</label>
@@ -42,7 +42,7 @@
 </div>
 
 <!-- List reviews -->
-<div class="results-wrapper">
+<div class="results-wrapper container">
 	<div class="col-md-6 review" ng-repeat="review in reviews">
 		<h4 class="review-item">{{review.item}}</h4>
 		-
