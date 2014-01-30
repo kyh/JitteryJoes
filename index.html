@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="jitteryApp">
+<head>
+	<meta charset="utf-8">
+	<title>Jittery Joe's</title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="lib/css/animate.css">
+	<link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+	<header ng-class="{blendspage: myPage == 'Blends', storiespage: myPage == 'Stories'}">
+		<nav class="main-nav">
+			<ul class="pull-right">
+		        <li><a href="#Blends">Blends</a></li>
+		        <li><a href="#Stories">Stories</a></li>
+	        </ul>
+    	</nav>
+    	<div class="jittery-logo">
+    		<!-- <object type="image/svg+xml" data="img/Coffee.svg" class="coffee-logo" ng-show="page == 'blend'"></object> -->
+    		<img src="img/Coffee.svg" class="coffee-logo" ng-if="myPage == 'Blends'" alt="Our blends">
+    		<img src="img/Stories.svg" class="coffee-logo stories-logo" ng-if="myPage == 'Stories'" alt="Your stories">
+    	</div>
+	</header>
+
+	<div ng-view class="main-body clearfix"></div>
+
+	<footer class="container">
+			<!-- Logo -->
+			<div class="col-md-6">
+				<div class="logo">
+					<div class="slogan">
+						Really good coffee.
+					</div>
+				</div>
+			</div>
+
+			<!-- Newsletter form -->
+			<div class="col-md-6">
+				<form class="signup-form form-horizontal" name="signupForm" ng-submit="addNewSignup()" ng-hide="signupSent">
+					<label for="signupForm">Subscribe to newsletter</label>
+					<div class="user-name form-group">
+						<label class="col-md-2 control-label" for="user-name-field">Name</label>
+						<div class="col-md-10">
+							<input class="form-control" type="text" id="user-name-field" name="user-name-field" ng-model="user.name" />
+						</div>
+					</div>
+					<div class="user-email form-group">
+						<label class="col-md-2 control-label" for="user-email-field">Email</label>
+						<div class="col-md-10">
+							<input class="form-control" type="text" id="user-email-field" name="user-email-field" ng-model="user.email" />
+						</div>
+					</div>
+					<div class="submit form-group">
+						<div class="col-md-12">
+							<button type="submit" class="btn btn-default pull-right">Send</button>
+						</div>
+					</div>
+				</form>
+
+				<!-- Thank you message. -->
+				<div class="signup-sent" ng-show="signupSent">
+					<h5>Thanks for signing up!</h5>
+				</div>
+			</div>
+		</footer>
+
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular-animate.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+</body>
+</html>

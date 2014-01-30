@@ -1,0 +1,147 @@
+/* Main CSS Stylesheet */
+/*--- Imports ---*/
+@font-face {
+font-family: 'Lunchbox';
+src: url("fonts/Lunchbox.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Lunchbox-Light';
+src: url("fonts/LunchBox-Light.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Ornaments';
+src: url("fonts/LunchBoxSlabOrnaments.otf") format("opentype");
+}
+
+/*--- Basic Classes ---*/
+body { 
+  font-family: 'Lustria', serif; 
+  font-size:13px;
+  line-height:22px;
+  color:#444444;
+  padding:0 0;
+}
+
+::selection
+{
+color:#e00966;
+}
+::-moz-selection
+{
+color:#e00966;
+}
+
+.lunchbox {
+  font-family: 'lunchbox', serif;
+}
+.l-ornaments {
+  font-family: 'Ornaments';
+  font-size: 55px;
+  vertical-align: -10px;
+  margin: 0 10px;
+}
+
+.top-10{ margin-top: 10px }
+.top-20{ margin-top: 20px }
+.bot-10{ margin-bottom: 10px }
+.bot-20{ margin-bottom: 20px }
+.left-10{ margin-left: 10px }
+.right-10{ margin-right: 10px }
+
+/*--- Head ---*/
+
+header {
+  padding: 35px 25px;
+  width:100%;
+  height:300px;
+}
+
+header.blendspage{
+  background: #875f5c;
+}
+
+header.storiespage{
+  background: #d9845e;
+}
+
+header .main-nav {
+  margin:0 auto;
+  max-width: 1000px;
+}
+
+header .main-nav li {
+  display:inline-block;
+  margin-right:20px;
+  list-style:none;
+}
+header .main-nav li a{
+  color:#FFF;
+  font-family: 'Patua One', serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 7px 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+header .main-nav li a:hover, header .main-nav li a.active {
+  background: #FFF;
+  color: #875f5c;
+  text-decoration: none;
+}
+
+header .jittery-logo{
+  margin: 30px auto;
+  width: 760px;
+  height: 195px;
+  background: url(../img/JitteryLogo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 300px;
+}
+
+header .coffee-logo{
+  width: 300px;
+  height: 260px;
+  float: left;
+  margin-top: -25px;
+  z-index: 1;
+  position: absolute;
+}
+
+header .coffee-logo.stories-logo{
+  height: 210px;
+  width: 400px;
+}
+
+.coffee-logo.ng-enter {
+  -webkit-animation: bounceInUp 1s;
+  -moz-animation: bounceInUp 1s;
+  -ms-animation: bounceInUp 1s;
+  animation: bounceInUp 1s;
+  z-index: 1;
+}
+.coffee-logo.ng-leave {
+  -webkit-animation: bounceOutDown 1s;
+  -moz-animation: bounceOutDown 1s;
+  -ms-animation: bounceOutDown 1s;
+  animation: bounceOutDown 1s;
+  z-index: 1;
+}
+
+/*--- End HEAD ---*/
+
+/*--- Body Section ---*/
+.main-body{
+  z-index: 10;
+  position: relative;
+  background: #F8F8F8;
+  min-height: 500px;
+}
