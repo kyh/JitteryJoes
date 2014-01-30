@@ -7,10 +7,46 @@ angular.module('jitteryApp.controllers', [])
 
   // Set our reviews object to be empty by default.
   $scope.reviews = [];
+  $scope.reviewCount = [
+    { "name": "After Dinner", "count": 0, "sum": 0, "average": 0},
+    { "name": "Bourque Newswatch", "count": 0, "sum": 0, "average": 0},
+    { "name": "CN Tower of Power", "count": 0, "sum": 0, "average": 0},
+    { "name": "Connoisseur Estates", "count": 0, "sum": 0, "average": 0},
+    { "name": "Columbian", "count": 0, "sum": 0, "average": 0},
+    { "name": "Fordnation Blend", "count": 0, "sum": 0, "average": 0},
+    { "name": "Hawaii Kona", "count": 0, "sum": 0, "average": 0},
+    { "name": "House Blend", "count": 0, "sum": 0, "average": 0},
+    { "name": "Italian Roast", "count": 0, "sum": 0, "average": 0},
+    { "name": "Lionel Roastie", "count": 0, "sum": 0, "average": 0},
+    { "name": "Mocca-Java", "count": 0, "sum": 0, "average": 0},
+    { "name": "Reggae Blend", "count": 0, "sum": 0, "average": 0},
+    { "name": "Ruth Roast", "count": 0, "sum": 0, "average": 0},
+    { "name": "Toronto Blend", "count": 0, "sum": 0, "average": 0},
+    { "name": "Tropic of Coffee", "count": 0, "sum": 0, "average": 0},
+    { "name": "World Tour Blend", "count": 0, "sum": 0, "average": 0}
+  ]
   // JSONP to get the current ratings.
-  $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
+  $http.jsonp('http://jitteryjoes.myplanetrfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
   success(function(data, status) {
   	$scope.reviews = data;
+    for (var i = 0; i < $scope.reviews.length; i++) {
+      var coffeeType = $scope.reviews[i].item;
+      var coffeeRating = $scope.reviews[i].rating;
+      for (var k = 0; k < $scope.reviewCount.length; k++) {
+        if (coffeeType == $scope.reviewCount[k].name) {
+          $scope.reviewCount[k].count++;
+          $scope.reviewCount[k].sum += Math.round(parseInt(coffeeRating) * 100) / 100;
+          $scope.reviewCount[k].average = $scope.reviewCount[k].sum / $scope.reviewCount[k].count;
+        };
+      };
+    };
+    $scope.reviewCount.sort(function(a, b){
+      return b.average-a.average
+    })
+    $scope.top3 = [];
+    for (var i = 0; i < 3; i++) {
+      $scope.top3.push($scope.reviewCount[i])
+    };
   });
 
   // Add a new rating to the list.
