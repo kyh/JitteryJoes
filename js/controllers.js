@@ -26,7 +26,7 @@ angular.module('jitteryApp.controllers', [])
     { "name": "World Tour Blend", "count": 0, "sum": 0, "average": 0}
   ]
   // JSONP to get the current ratings.
-  $http.jsonp('http://jitteryjoes.myplanetrfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
+  $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
   success(function(data, status) {
   	$scope.reviews = data;
     for (var i = 0; i < $scope.reviews.length; i++) {
@@ -35,7 +35,7 @@ angular.module('jitteryApp.controllers', [])
       for (var k = 0; k < $scope.reviewCount.length; k++) {
         if (coffeeType == $scope.reviewCount[k].name) {
           $scope.reviewCount[k].count++;
-          $scope.reviewCount[k].sum += Math.round(parseInt(coffeeRating) * 100) / 100;
+          $scope.reviewCount[k].sum += parseInt(coffeeRating);
           $scope.reviewCount[k].average = $scope.reviewCount[k].sum / $scope.reviewCount[k].count;
         };
       };
