@@ -26,9 +26,10 @@
 		<div class="review-rating form-group col-md-8">
 			<label>Blend rating</label>
 			<br />
-			<label ng-repeat="num in [1,2,3,4,5]">
+			<label ng-repeat="num in [1,2,3,4,5]" ng-click="changeRating(num)" ng-init="$parent.rating = 0">
 				<input ng-model="review.rating" type="radio" id="rating-{{num}}" name="review-rating-field" value="{{num}}">
-				{{num}}
+          <span ng-hide="num > rating">*</span>
+          <span ng-show="num > rating">|</span>
 			</label>
 		</div>
 		<div class="review-comment form-group col-md-12">

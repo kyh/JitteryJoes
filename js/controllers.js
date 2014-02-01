@@ -215,4 +215,8 @@ angular.module('jitteryApp.controllers', [])
         $scope.signupSent = true;
       });
   }
+
+  $scope.changeRating = function (rating) {
+    $scope.rating = rating;
+  }
 });
