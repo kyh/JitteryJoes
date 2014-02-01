@@ -69,7 +69,7 @@ angular.module('jitteryApp.controllers', [])
     "sum": 0,
     "average": 0,
     "description": "Overwhelmed by our huge selection of coffees? Try our classic house blend that’s roasted in house with tonnes of love from Jittery Joe.",
-    "picture": "img/blends/1.png"
+    "picture": "img/blends/House.png"
   },
   { 
     "name": "Italian Roast",
@@ -93,7 +93,7 @@ angular.module('jitteryApp.controllers', [])
     "sum": 0,
     "average": 0,
     "description": "Who doesn’t love chocolate?  Our funky Mocca-Java blend is roasted with organic dark cocoa beans which will keep you energized all day.  Just don’t become addicted. ",
-    "picture": "img/blends/1.png"
+    "picture": "img/blends/CafeMocha.png"
   },
   { 
     "name": "Reggae Blend",
@@ -117,7 +117,7 @@ angular.module('jitteryApp.controllers', [])
     "sum": 0, 
     "average": 0,
     "description": "If you are living in a Toronto state of mind, then this blend is the perfect companion for you.  Its complex yet subtle taste is a true reflection of such a diverse city.",
-    "picture": "img/blends/1.png"
+    "picture": "img/blends/Toronto.png"
   },
   {
     "name": "Tropic of Coffee",
