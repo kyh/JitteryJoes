@@ -30,7 +30,7 @@
 
 	<footer>
 		<div class="container">
-			<div class="col-xs-6">
+			<div class="col-sm-6">
 				<h3 class="lunchbox">Really Good Coffee<span class="l-ornaments">Y</span></h3>
 				<div class="row">
 					<a class="share-link icon-pinterest" href=""></a>
@@ -40,7 +40,8 @@
 			</div>
 			<div class="bottom-center-logo col-xs-2 hidden-sm hidden-xs"></div>
 			<!-- Newsletter form -->
-			<div class="col-xs-4 col-md-3 col-md-offset-2 col-sm-offset-1">
+			<div class="col-sm-4 col-md-3 col-md-offset-2 col-sm-offset-1">
+				<h3 class="lunchbox visible-xs underline">Sign Up for our newsletter!</h3>
 				<form class="signup-form form-horizontal" name="signupForm" ng-submit="addNewSignup()" ng-hide="signupSent">
 					<p class="lunchbox">Hi! My name is 
 						<input class="subscribe-input subscribe-input-name" type="text" id="user-name-field" name="user-name-field" ng-model="user.name" />
@@ -49,7 +50,7 @@
 						<input class="subscribe-input subscribe-input-name" type="text" id="user-email-field" name="user-email-field" ng-model="user.email" />
 					</p>
 					<div class="submit clearfix">
-						<div class="col-xs-12">
+						<div class="col-sm-12 col-xs-5">
 							<button type="submit" class="send-btn lunchbox pull-right">Send</button>
 						</div>
 					</div>
@@ -60,7 +61,7 @@
 				</div>
 			</div>
 			<div class="col-md-1">
-				<div class="signup-title"><h5 class="lunchbox">Sign Up for our newsletter!</h5></div>
+				<div class="signup-title hidden-xs"><h5 class="lunchbox">Sign Up for our newsletter!</h5></div>
 			</div>
 		</div>
 	</footer>
