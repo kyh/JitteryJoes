@@ -43,11 +43,13 @@
 
 <!-- List reviews -->
 <div class="results-wrapper container">
-	<div class="col-md-6 review" ng-repeat="review in reviews">
-		<h4 class="review-item">{{review.item}}</h4>
-		-
-		<div class="review-rating">{{review.rating}}/5</div>
-		<div class="review-comment">{{review.comment}}</div>
-		<div class="review-date pull-right">{{ (review.node_created * 1000) | date: 'MMM d - h:mma' }}</div>
+	<div class="col-md-4" ng-repeat="review in reviews">
+		<div class="content-block">
+			<span class="blend-picture">
+				<img ng-src="{{review.picture}}" alt="">
+			</span>
+			<h4>{{review.item}}</h4>
+			<p>{{review.comment}}</p>
+		</div>
 	</div>
 </div>
