@@ -144,4 +144,100 @@ header .coffee-logo.stories-logo{
   position: relative;
   background: #F8F8F8;
   min-height: 500px;
+  padding-bottom: 60px;
+}
+
+/*--- Footer Section ---*/
+footer{
+  background-color: #e3e2dd;
+  background-image: url(../img/footer-bg.png);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.share-link{
+  margin: 0.75em 0.75em 2em;
+  border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  display: inline-block;
+  line-height: 58px;
+  font-size: 25px;
+  padding: 0 10px;
+  position: relative;
+  background: #f6adcc;
+  color: #FFF;
+}
+.share-link:hover{
+  text-decoration: none;
+  color: #FFF;
+}
+.share-link:hover:after{
+  width: 135px;
+  height: 130px;
+  background-image: url(../img/share_hover.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 135px 115px;
+  top: -25px;
+  left: -43px;
+  content: "";
+}
+.icon-twitter{
+  font-size: 1.5em;
+  padding: 0 13px;
+}
+.bottom-center-logo{
+  background-image: url(../img/JitteryCoffee.svg);
+  width: 250px;
+  height: 265px;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 50%;
+  margin: -50px 0 0 -125px;
+  z-index: 10;
+}
+.signup-form{
+  margin-top: 25px;
+  font-size: 24px;
+  padding: 15px;
+}
+.subscribe-input{
+  border: none;
+  border-bottom: 1px dashed #875f5c;
+  background: none;
+  outline: none;
+  color: #f6adcc;
+  font-size: 20px;
+}
+.send-btn{
+  border: none;
+  border-radius: 30px;
+  color: #FFF;
+  background: #875f5c;
+  padding: 10px 20px 5px;
+}
+.send-btn:hover{
+  border: 2px dotted #875f5c;
+  background: none;
+  color: #875f5c;
+}
+.send-btn:active, .send-btn:visited, .send-btn:focus{
+  outline: none;
+  margin-top: 2px;
+}
+.signup-title{
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  width: 180px;
+  right: -15px;
+  z-index: 10;
+  padding: 0 15px;
+  border-radius: 30px;
+  background: #875f5c;
+  color: #FFF;
+  transform:rotate(30deg);
+  -ms-transform:rotate(30deg);
+  -webkit-transform:rotate(30deg);
 }
