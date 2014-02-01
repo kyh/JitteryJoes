@@ -132,8 +132,8 @@ angular.module('jitteryApp.controllers', [])
     "count": 0,
     "sum": 0,
     "average": 0,
-    "description": "When Jittery Joe was a young lad, he traveled around the world displaying his secret blend composed of 7 different types of coffee beans. This blend had been presented to royal families in Japan, Morocco and Madagascar.",
-    "picture": "img/blends/1.png"
+    "description": "When Jittery Joe was a young lad, he traveled around the world displaying his secret blend composed of 7 different types of coffee beans.",
+    "picture": "img/blends/French Roast.png"
   }
   ]
   // JSONP to get the current ratings.
