@@ -36,7 +36,7 @@ angular.module('jitteryApp.controllers', [])
     "count": 0,
     "sum": 0,
     "average": 0,
-    "description": "This is our most sophisticated and most complex blend yet. It is highly praised by coffee connoisseurs around the world, and we maintain the recipe as a highly coveted secret.  Try it with a pipe for extra effect.",
+    "description": "This is our most sophisticated and most complex blend yet. It is highly praised by coffee connoisseurs around the world, and we maintain the recipe as a highly coveted secret.",
     "picture": ""
   },
   { 
@@ -132,7 +132,7 @@ angular.module('jitteryApp.controllers', [])
     "count": 0,
     "sum": 0,
     "average": 0,
-    "description": "When Jittery Joe was a young lad, he traveled around the world displaying his secret blend composed of 7 different types of coffee beans. This blend had been presented to royal families in Japan, Morocco and Madagascar. Now you can drink like a king with this excellent blend!",
+    "description": "When Jittery Joe was a young lad, he traveled around the world displaying his secret blend composed of 7 different types of coffee beans. This blend had been presented to royal families in Japan, Morocco and Madagascar.",
     "picture": ""
   }
   ]

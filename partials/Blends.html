@@ -1,17 +1,20 @@
 <div class="container">
-	<h3 class="lunchbox">Really Good Coffee<span class="l-ornaments">Y</span></h3>
+	<h3 class="lunchbox">Our Blends!<span class="l-ornaments">Y</span></h3>
 
-<!-- 	<div class="col-md-4" ng-repeat="review in reviews">
-		<div class="content-block">
-			<span class="blend-picture">
-				<img src="" ng-src="" alt="" width="80" height="78">
-			</span>
-			<h4>{{review.item}}</h4>
-			<p>{{review.comment}}</p>
-			<span>{{review.rating}}/5</span>
-		</div>
-	</div> -->
+	<ul class="grid cs-style-3">
+		<li ng-repeat="blend in reviewCount">
+			<figure>
+				<img src="img/blends/1.png" alt="">
+				<figcaption>
+					<h3 class="text-center">{{blend.name}}</h3>
+					<span>{{blend.description}}</span>
+					<a class="lunchbox" href="">See the reviews!</a>
+				</figcaption>
+			</figure>
+		</li>
+	</ul>
 
+<!-- 
 	<div class="col-md-4" ng-repeat="blend in reviewCount">
 		<div class="content-block">
 			<span class="blend-picture">
@@ -20,7 +23,7 @@
 			<h4>{{blend.name}}</h4>
 			<p>{{blend.description}}</p>
 		</div>
-	</div>
+	</div> -->
 <!-- 	<pre>{{top3| json}}</pre>
 	<pre>{{reviewCount | json}}</pre> -->
 </div>

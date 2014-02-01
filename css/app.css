@@ -161,7 +161,7 @@ header .coffee-logo.stories-logo{
   display:block;
   float:left;
   margin-right:20px;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
   padding: 10px;
   -webkit-transition:all 0.2s ease-in;  
   -moz-transition:all 0.2s ease-in;  
@@ -176,6 +176,121 @@ header .coffee-logo.stories-logo{
   padding-top: 15px;
   margin: 6px 0 8px 0;
 }
+/*--- Grid Page --*/
+.grid {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid li {
+  display: inline-block;
+  width: 300px;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.grid figure {
+  margin: 0;
+  position: relative;
+}
+
+.grid figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+
+.grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #88605d;
+  color: #FFFFFF;
+  line-height: 20px;
+}
+
+.grid figcaption h3 {
+  margin: 0;
+  padding: 0;
+  font-size:15px;
+  color: #FFFFFF;
+  font-family: 'Patua One', serif;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed;
+  padding-bottom: 5px;
+}
+
+.grid figcaption span:before {
+  content: '';
+}
+
+.grid figcaption a {
+  text-align: center;
+  border-radius: 2px;
+  display: block;
+  width: 95%;
+  color: #fff;
+  border: 1px dashed;
+}
+
+/* Caption Style 3 */
+.cs-style-3 figure {
+  overflow: hidden;
+}
+
+.cs-style-3 figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3 figure:hover img,
+.cs-style-3 figure.cs-hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.cs-style-3 figcaption {
+  height: 200px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
 /*--- Footer Section ---*/
 footer{
   background-color: #e3e2dd;
