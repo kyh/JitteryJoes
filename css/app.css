@@ -23,7 +23,9 @@ body {
   color:#444444;
   padding:0 0;
 }
-
+.content-block h4{
+  font-family: 'Patua One', serif;
+}
 ::selection
 {
 color:#e00966;
@@ -149,6 +151,29 @@ header .coffee-logo.stories-logo{
   padding-bottom: 60px;
 }
 
+.blend-picture{
+  width:124px;
+  height:124px;
+  border: 6px solid #875f5c;
+  background:#875f5c;
+  border-radius:50%;
+  text-align:center;
+  display:block;
+  float:left;
+  margin-right:20px;
+  margin-bottom: 50px;
+  -webkit-transition:all 0.2s ease-in;  
+  -moz-transition:all 0.2s ease-in;  
+  -o-transition:all 0.2s ease-in;  
+  transition:all 0.2s ease-in;   
+}
+.blend-picture img{
+  margin: 15px 0;
+}
+.content-block h4{
+  padding-top: 15px;
+  margin: 6px 0 8px 0;
+}
 /*--- Footer Section ---*/
 footer{
   background-color: #e3e2dd;
