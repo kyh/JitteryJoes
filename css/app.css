@@ -155,7 +155,11 @@ header .coffee-logo.stories-logo{
   width:124px;
   height:124px;
   border: 6px solid #875f5c;
-  background:#875f5c;
+  background: url(../img/JitteryLogo.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 20px;
+  background-size: c;
+  background-color: #875f5c;
   border-radius:50%;
   text-align:center;
   display:block;
@@ -384,4 +388,11 @@ footer{
   transform:rotate(30deg);
   -ms-transform:rotate(30deg);
   -webkit-transform:rotate(30deg);
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  display:none;
 }

@@ -1,10 +1,10 @@
 <div class="container">
-	<h3 class="lunchbox">Our Blends!<span class="l-ornaments">Y</span></h3>
+	<h2 class="lunchbox text-center">Our Blends!<span class="l-ornaments">Y</span></h2>
 
 	<ul class="grid cs-style-3">
 		<li ng-repeat="blend in reviewCount">
 			<figure>
-				<img src="img/blends/1.png" alt="">
+				<img ng-src="{{blend.picture}}" width="260"	height="195" alt="">
 				<figcaption>
 					<h3 class="text-center">{{blend.name}}</h3>
 					<span>{{blend.description}}</span>
@@ -13,17 +13,4 @@
 			</figure>
 		</li>
 	</ul>
-
-<!-- 
-	<div class="col-md-4" ng-repeat="blend in reviewCount">
-		<div class="content-block">
-			<span class="blend-picture">
-				<img ng-src="{{blend.picture}}" alt="">
-			</span>
-			<h4>{{blend.name}}</h4>
-			<p>{{blend.description}}</p>
-		</div>
-	</div> -->
-<!-- 	<pre>{{top3| json}}</pre>
-	<pre>{{reviewCount | json}}</pre> -->
 </div>
