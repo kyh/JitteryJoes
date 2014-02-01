@@ -12,13 +12,13 @@
 		</div>
 	</div> -->
 
-	<div class="col-md-4" ng-repeat="blend in reviewCount">
+	<div class="col-md-4" ng-repeat="review in reviews">
 		<div class="content-block">
 			<span class="blend-picture">
-				<img ng-src="{{blend.picture}}" alt="">
+				<img ng-src="{{$parent.reviewCount[review.item].picture}}" alt="" />
 			</span>
-			<h4>{{blend.name}}</h4>
-			<p>{{blend.description}}</p>
+			<h4>{{review.item}}</h4>
+			<p>{{review.description}}</p>
 		</div>
 	</div>
 <!-- 	<pre>{{top3| json}}</pre>
