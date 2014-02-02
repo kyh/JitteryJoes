@@ -1,7 +1,8 @@
 <div class="container">
 	<h2 class="lunchbox text-center">Our Blends!<span class="l-ornaments">Y</span></h2>
-	<ul class="grid cs-style-3">
+	<ul class="grid cs-style">
 		<li ng-repeat="blend in reviewCount">
+			<h4 class="lunchbox">{{blend.name}}</h4>
 			<figure>
 				<img ng-src="{{blend.picture}}" width="260"	height="195" alt="">
 				<figcaption>
