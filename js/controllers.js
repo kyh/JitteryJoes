@@ -138,6 +138,7 @@ angular.module('jitteryApp.controllers', [])
       "picture": "img/blends/French.png"
     }
   };
+
   // JSONP to get the current ratings.
   $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
   success(function(data, status) {
