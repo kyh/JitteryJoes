@@ -2,7 +2,7 @@
 /*--- Imports ---*/
 @font-face {
 font-family: 'Lunchbox';
-src: url("fonts/Lunchbox.otf") format("opentype");
+src: url("fonts/LunchBox.otf") format("opentype");
 }
 
 @font-face {
@@ -23,7 +23,9 @@ body {
   color:#444444;
   padding:0 0;
 }
-
+.content-block h4{
+  font-family: 'Patua One', serif;
+}
 ::selection
 {
 color:#e00966;
@@ -49,6 +51,8 @@ color:#e00966;
 .bot-20{ margin-bottom: 20px }
 .left-10{ margin-left: 10px }
 .right-10{ margin-right: 10px }
+
+.underline{ text-decoration: underline }
 
 /*--- Head ---*/
 
@@ -144,4 +148,258 @@ header .coffee-logo.stories-logo{
   position: relative;
   background: #F8F8F8;
   min-height: 500px;
+  padding-bottom: 60px;
+}
+
+.blend-picture{
+  width:124px;
+  height:124px;
+  border: 2px dotted #875f5c;
+  background-repeat: no-repeat;
+  background-position: 0px 20px;
+  border-radius:50%;
+  text-align:center;
+  display:block;
+  float:left;
+  margin-right:20px;
+  margin-bottom: 120px;
+  -webkit-transition:all 0.2s ease-in;  
+  -moz-transition:all 0.2s ease-in;  
+  -o-transition:all 0.2s ease-in;  
+  transition:all 0.2s ease-in;   
+}
+.blend-picture img{
+  max-width: 100%;
+  max-height: 100%
+}
+.content-block h4{
+  padding-top: 15px;
+  margin: 6px 0 8px 0;
+}
+/*--- Grid Page --*/
+.grid {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid li {
+  display: inline-block;
+  width: 300px;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.grid figure {
+  margin: 0;
+  position: relative;
+}
+
+.grid figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+
+.grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #88605d;
+  color: #FFFFFF;
+  line-height: 20px;
+}
+
+.grid figcaption h3 {
+  margin: 0;
+  padding: 0;
+  font-size:15px;
+  color: #FFFFFF;
+  font-family: 'Patua One', serif;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed;
+  padding-bottom: 5px;
+}
+
+.grid figcaption span:before {
+  content: '';
+}
+
+.grid figcaption a {
+  text-align: center;
+  border-radius: 2px;
+  display: block;
+  width: 95%;
+  color: #fff;
+  border: 1px dashed;
+}
+
+/* Caption Style */
+.cs-style figure {
+  overflow: hidden;
+}
+
+.cs-style figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.no-touch .cs-style figure:hover img,
+.cs-style figure.cs-hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.cs-style figcaption {
+  height: 200px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style figure:hover figcaption,
+.cs-style figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style figcaption a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+/* Review Comment */
+.review-comment textarea{
+  border: 2px dotted #875f5c;
+}
+.review-item select{
+  border: 2px dotted #875f5c;
+}
+form label{
+  font-size: 20px;
+} 
+
+/*--- Footer Section ---*/
+footer{
+  background-color: #e3e2dd;
+  background-image: url(../img/footer-bg.png);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.share-link{
+  margin: 0.75em 0.75em 2em;
+  border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  display: inline-block;
+  line-height: 58px;
+  font-size: 25px;
+  padding: 0 10px;
+  position: relative;
+  background: #f6adcc;
+  color: #FFF;
+}
+.share-link:hover{
+  text-decoration: none;
+  color: #FFF;
+}
+.share-link:hover:after{
+  width: 135px;
+  height: 130px;
+  background-image: url(../img/share_hover.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 135px 115px;
+  top: -25px;
+  left: -43px;
+  content: "";
+}
+.icon-twitter{
+  font-size: 1.5em;
+  padding: 0 13px;
+}
+.bottom-center-logo{
+  background-image: url(../img/JitteryCoffee.svg);
+  width: 250px;
+  height: 265px;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 50%;
+  margin: -50px 0 0 -125px;
+  z-index: 10;
+}
+.signup-form{
+  margin-top: 25px;
+  font-size: 24px;
+  padding: 15px;
+}
+.subscribe-input{
+  border: none;
+  border-bottom: 1px dashed #875f5c;
+  background: none;
+  outline: none;
+  color: #f6adcc;
+  font-size: 20px;
+}
+.send-btn{
+  border: none;
+  border-radius: 30px;
+  color: #FFF;
+  background: #875f5c;
+  padding: 10px 20px 5px;
+}
+.send-btn:hover{
+  border: 2px dotted #875f5c;
+  background: none;
+  color: #875f5c;
+}
+.send-btn:active, .send-btn:visited, .send-btn:focus{
+  outline: none;
+  margin-top: 2px;
+}
+.signup-title{
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  width: 180px;
+  right: -15px;
+  z-index: 10;
+  padding: 0 15px;
+  border-radius: 30px;
+  background: #875f5c;
+  color: #FFF;
+  transform:rotate(30deg);
+  -ms-transform:rotate(30deg);
+  -webkit-transform:rotate(30deg);
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  display:none;
 }

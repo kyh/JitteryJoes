@@ -3,11 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Jittery Joe's</title>
+	<link rel="icon" type="image/ico" href="img/favicon.ico" />
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
 	<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="lib/css/animate.css">
 	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="css/fontello.css">
 </head>
 <body>
 	<header ng-class="{blendspage: myPage == 'Blends', storiespage: myPage == 'Stories'}">
@@ -26,49 +28,49 @@
 
 	<div ng-view class="main-body clearfix"></div>
 
-	<footer class="container">
-			<!-- Logo -->
-			<div class="col-md-6">
-				<div class="logo">
-					<div class="slogan">
-						Really good coffee.
-					</div>
+	<footer>
+		<div class="container">
+			<div class="col-sm-6">
+				<h3 class="lunchbox">Really Good Coffee<span class="l-ornaments">Y</span></h3>
+				<div class="row">
+					<a class="share-link icon-pinterest" href=""></a>
+					<a class="share-link icon-facebook" href=""></a>
+					<a class="share-link icon-twitter" href="http://www.twitter.com/jitteryjoecafe"></a>
 				</div>
 			</div>
-
+			<div class="bottom-center-logo col-xs-2 hidden-sm hidden-xs"></div>
 			<!-- Newsletter form -->
-			<div class="col-md-6">
+			<div class="col-sm-4 col-md-3 col-md-offset-2 col-sm-offset-1">
+				<h3 class="lunchbox visible-xs underline">Sign Up for our newsletter!</h3>
 				<form class="signup-form form-horizontal" name="signupForm" ng-submit="addNewSignup()" ng-hide="signupSent">
-					<label for="signupForm">Subscribe to newsletter</label>
-					<div class="user-name form-group">
-						<label class="col-md-2 control-label" for="user-name-field">Name</label>
-						<div class="col-md-10">
-							<input class="form-control" type="text" id="user-name-field" name="user-name-field" ng-model="user.name" />
-						</div>
-					</div>
-					<div class="user-email form-group">
-						<label class="col-md-2 control-label" for="user-email-field">Email</label>
-						<div class="col-md-10">
-							<input class="form-control" type="text" id="user-email-field" name="user-email-field" ng-model="user.email" />
-						</div>
-					</div>
-					<div class="submit form-group">
-						<div class="col-md-12">
-							<button type="submit" class="btn btn-default pull-right">Send</button>
+					<p class="lunchbox">Hi! My name is 
+						<input class="subscribe-input subscribe-input-name" type="text" id="user-name-field" name="user-name-field" ng-model="user.name" placeholder="Jittery Joe"/>
+					</p>
+					<p class="lunchbox">And you can reach me at 
+						<input class="subscribe-input subscribe-input-name" type="text" id="user-email-field" name="user-email-field" ng-model="user.email" placeholder="JitterAllDay@JJ.com"/>
+					</p>
+					<div class="submit clearfix">
+						<div class="col-sm-12 col-xs-5">
+							<button type="submit" class="send-btn lunchbox pull-right">Send</button>
 						</div>
 					</div>
 				</form>
-
 				<!-- Thank you message. -->
 				<div class="signup-sent" ng-show="signupSent">
-					<h5>Thanks for signing up!</h5>
+					<h5 class="lunchbox">Thanks for signing up!</h5>
 				</div>
 			</div>
-		</footer>
+			<div class="col-md-1">
+				<div class="signup-title hidden-xs"><h5 class="lunchbox">Sign Up for our newsletter!</h5></div>
+			</div>
+		</div>
+	</footer>
 
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angular/angular-route.js"></script>
 	<script src="lib/angular/angular-animate.js"></script>
+	<script src="lib/js/toucheffects.js"></script>
+	<script src="lib/js/modernizr.custom.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/services.js"></script>
 	<script src="js/controllers.js"></script>

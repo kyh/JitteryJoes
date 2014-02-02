@@ -1,3 +1,16 @@
 <div class="container">
-	<h1 class="lunchbox text-center">Really Good Coffee<span class="l-ornaments">Y</span></h1>
+	<h2 class="lunchbox text-center">Our Blends!<span class="l-ornaments">Y</span></h2>
+	<ul class="grid cs-style">
+		<li ng-repeat="blend in reviewCount">
+			<h4 class="lunchbox">{{blend.name}}</h4>
+			<figure>
+				<img ng-src="{{blend.picture}}" width="260"	height="195" alt="">
+				<figcaption>
+					<h3 class="text-center">{{blend.name}}</h3>
+					<span>{{blend.description}}</span><br>
+					<a class="lunchbox" href="#Stories">See the reviews!</a>
+				</figcaption>
+			</figure>
+		</li>
+	</ul>
 </div>
