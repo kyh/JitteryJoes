@@ -1,8 +1,8 @@
 <div class="review-form-wrapper container clearfix">
 	<h2 class="lunchbox text-center">Tell us your Stories!<span class="l-ornaments">Y</span></h2>
 	<form class="clearfix col-md-12" name="ratingForm" ng-submit="addNewRating()">
-		<div class="review-item form-group col-md-4">
-			<label for="review-item-field">Choose a blend</label>
+		<div class="review-item form-group col-md-6">
+			<label for="review-item-field" class="lunchbox">Choose a blend</label>
 			<select ng-model="review.item" name="review-item-field" id="review-item-field" class="review-item-field form-control">
 				<option value="After Dinner">After Dinner</option>
 				<option value="Bourque Newswatch">Bourque Newswatch</option>
@@ -24,8 +24,8 @@
 				<option value="World Tour Blend">World Tour Blend</option>
 			</select>
 		</div>
-		<div class="review-rating form-group col-md-8">
-			<label>Blend rating</label>
+		<div class="review-rating form-group col-md-6">
+			<label class="lunchbox">Blend rating</label>
 			<br />
 			<label ng-repeat="num in [1,2,3,4,5]" ng-click="changeRating(num)" ng-init="$parent.rating = 0">
 				<input ng-model="review.rating" type="radio" id="rating-{{num}}" name="review-rating-field" value="{{num}}">
@@ -34,7 +34,7 @@
 			</label>
 		</div>
 		<div class="review-comment form-group col-md-12">
-			<label for="review-comment-field">Comment</label>
+			<label for="review-comment-field" class="lunchbox">Comment</label>
 			<textarea ng-model="review.comment" rows="3" class="form-control" id="review-comment-field" name="review-comment-field"></textarea>
 		</div>
 		<div class="submit form-group col-md-12">
@@ -45,13 +45,14 @@
 
 <!-- List reviews -->
 <div class="results-wrapper container">
-	<div class="col-md-6" ng-repeat="review in reviews | limitTo:20">
+	<div class="col-md-6" ng-repeat="review in reviews | limitTo: 20">
 		<div class="content-block">
-			<span class="blend-picture">
-				<img ng-src="{{review.picture}}" alt="">
+			<span>
+				<img class="blend-picture" ng-src="{{$parent.reviewCount[review.item].picture}}" alt="">
 			</span>
 			<h4>{{review.item}}</h4>
 			<p>{{review.comment}}</p>
+			<span class="lunchbox">{{review.rating}}/5!</span>
 		</div>
 	</div>
 </div>

@@ -154,19 +154,15 @@ header .coffee-logo.stories-logo{
 .blend-picture{
   width:124px;
   height:124px;
-  border: 6px solid #875f5c;
-  background: url(../img/JitteryLogo.svg);
+  border: 2px dotted #875f5c;
   background-repeat: no-repeat;
   background-position: 0px 20px;
-  background-size: c;
-  background-color: #875f5c;
   border-radius:50%;
   text-align:center;
   display:block;
   float:left;
   margin-right:20px;
   margin-bottom: 120px;
-  padding: 10px;
   -webkit-transition:all 0.2s ease-in;  
   -moz-transition:all 0.2s ease-in;  
   -o-transition:all 0.2s ease-in;  
@@ -243,7 +239,7 @@ header .coffee-logo.stories-logo{
   border: 1px dashed;
 }
 
-/* Caption Style 3 */
+/* Caption Style */
 .cs-style figure {
   overflow: hidden;
 }
@@ -294,6 +290,17 @@ header .coffee-logo.stories-logo{
   bottom: 5px;
   right: 5px;
 }
+
+/* Review Comment */
+.review-comment textarea{
+  border: 2px dotted #875f5c;
+}
+.review-item select{
+  border: 2px dotted #875f5c;
+}
+form label{
+  font-size: 20px;
+} 
 
 /*--- Footer Section ---*/
 footer{
