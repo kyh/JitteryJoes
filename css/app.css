@@ -147,7 +147,7 @@ header .coffee-logo.stories-logo{
   z-index: 10;
   position: relative;
   background: #F8F8F8;
-  min-height: 500px;
+  min-height: 1000px;
   padding-bottom: 60px;
 }
 
